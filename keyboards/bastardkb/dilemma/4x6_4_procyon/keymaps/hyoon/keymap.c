@@ -97,6 +97,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                    ╰───────────────────────────────────╯ ╰───────────────────────────────────╯
   ),
 };
+
+
+#ifdef COMBO_ENABLE
+const combo_t key_combos[] = {}
+#endif
+
 // clang-format on
 
 #ifdef POINTING_DEVICE_ENABLE
@@ -123,3 +129,5 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 };
 // clang-format on
 #endif // ENCODER_MAP_ENABLE
+       //
+
