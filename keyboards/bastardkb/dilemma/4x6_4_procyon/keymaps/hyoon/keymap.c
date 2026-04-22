@@ -32,6 +32,8 @@ enum dilemma_keymap_layers {
 #define RAISE MO(LAYER_RAISE)
 #define PT_Z LT(LAYER_POINTER, KC_Z)
 #define PT_SLSH LT(LAYER_POINTER, KC_SLSH)
+#define SYM_F LT(4, KC_F),
+#define SYM_J LT(4, KC_J),
 
 #ifndef POINTING_DEVICE_ENABLE
 #    define DRGSCRL KC_NO
@@ -51,8 +53,6 @@ enum aliases {
     ALT_L = LALT_T(KC_L),
     SFT_K = RSFT_T(KC_K),
     CTL_M = RCTL_T(KC_M),
-    SYM_F = LT(4, KC_F),
-    SYM_J = LT(4, KC_J),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
