@@ -50,6 +50,8 @@ enum aliases {
     ALT_L = LALT_T(KC_L),
     SFT_K = RSFT_T(KC_K),
     CTL_M = RCTL_T(KC_M),
+    SYM_F = LT(3, KC_F),
+    SYM_J = LT(3, KC_J),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -59,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
         KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSLS,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_LSFT,    GUI_A,   ALT_S,   SFT_D,   KC_F,    KC_G,       KC_H,    KC_J,    SFT_K,   ALT_L, GUI_SC, KC_QUOT,
+       KC_LSFT,    GUI_A,   ALT_S,   SFT_D,   SYM_F,   KC_G,       KC_H,    SYM_J,   SFT_K,   ALT_L, GUI_SC, KC_QUOT,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_LCTL,    PT_Z,    KC_X,    KC_C,    CTL_V,   KC_B,       KC_N,   CTL_M, KC_COMM,  KC_DOT, PT_SLSH, KC_LALT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
