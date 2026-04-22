@@ -115,6 +115,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 combo_t key_combos[] = {};
 #endif
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
+    switch(keycode) {
+        case CTL_V:
+        case CTL_M:
+        case SFT_D:
+        case SFT_K:
+            return TAPPING_TERM - 45;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 bool is_flow_tap_key(uint16_t keycode) {
     if ((get_mods() & (MOD_MASK_CG | MOD_BIT_LALT)) != 0) {
         return false; // Disable Flow Tap on hotkeys.
