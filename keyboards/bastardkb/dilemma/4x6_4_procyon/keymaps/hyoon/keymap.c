@@ -32,8 +32,8 @@ enum dilemma_keymap_layers {
 #define RAISE MO(LAYER_RAISE)
 #define PT_Z LT(LAYER_POINTER, KC_Z)
 #define PT_SLSH LT(LAYER_POINTER, KC_SLSH)
-#define SYM_F LT(4, KC_F),
-#define SYM_J LT(4, KC_J),
+#define SYM_F LT(4, KC_F)
+#define SYM_J LT(4, KC_J)
 
 #ifndef POINTING_DEVICE_ENABLE
 #    define DRGSCRL KC_NO
