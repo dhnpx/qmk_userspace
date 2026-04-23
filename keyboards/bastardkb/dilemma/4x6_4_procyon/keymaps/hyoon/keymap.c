@@ -136,8 +136,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
     switch(keycode) {
         case CTL_V:
         case CTL_M:
-        case SFT_D:
-        case SFT_K:
+        case SFT_F:
+        case SFT_J:
             return TAPPING_TERM - 45;
         default:
             return TAPPING_TERM;
