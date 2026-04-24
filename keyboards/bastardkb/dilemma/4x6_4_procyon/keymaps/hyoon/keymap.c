@@ -32,8 +32,8 @@ enum dilemma_keymap_layers {
 #define RAISE MO(LAYER_RAISE)
 #define PT_Z LT(LAYER_POINTER, KC_Z)
 #define PT_SLSH LT(LAYER_POINTER, KC_SLSH)
-#define SYM_D LT(4, KC_D)
-#define SYM_K LT(4, KC_K)
+#define SYM_F LT(LAYER_SYMBOL, KC_F)
+#define SYM_J LT(LAYER_SYMBOL, KC_J)
 
 #ifndef POINTING_DEVICE_ENABLE
 #    define DRGSCRL KC_NO
@@ -47,11 +47,11 @@ enum dilemma_keymap_layers {
 enum aliases {
     GUI_A = LGUI_T(KC_A),
     ALT_S = LALT_T(KC_S),
-    SFT_F = LSFT_T(KC_F),
+    SFT_D = LSFT_T(KC_D),
     CTL_V = LCTL_T(KC_V),
     GUI_SC = RGUI_T(KC_SCLN),
     ALT_L = LALT_T(KC_L),
-    SFT_J = RSFT_T(KC_J),
+    SFT_K = RSFT_T(KC_K),
     CTL_M = RCTL_T(KC_M),
 };
 
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
         KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSLS,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_LSFT,    GUI_A,   ALT_S,   SYM_D,   SFT_F,   KC_G,       KC_H,    SFT_J,   SYM_K,   ALT_L, GUI_SC, KC_QUOT,
+       KC_LSFT,    GUI_A,   ALT_S,   SFT_D,   SYM_F,   KC_G,       KC_H,    SYM_J,   SFT_K,   ALT_L, GUI_SC, KC_QUOT,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_LCTL,    PT_Z,    KC_X,    KC_C,    CTL_V,   KC_B,       KC_N,   CTL_M, KC_COMM,  KC_DOT, PT_SLSH, KC_LALT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
@@ -136,8 +136,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
     switch(keycode) {
         case CTL_V:
         case CTL_M:
-        case SFT_F:
-        case SFT_J:
+        case SFT_D:
+        case SFT_K:
             return TAPPING_TERM - 45;
         default:
             return TAPPING_TERM;
